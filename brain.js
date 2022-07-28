@@ -216,7 +216,7 @@ let ter = `📚 *Commands*: 55\n👥 *Users*: ${tr}\n🔰 *Groups*: ${ur}\n🚫 
 console.log(ter)
    let buttonMessaged = {
         text: ter,
-        footer: '©ARUS',
+        footer: '©DEEPAK',
         buttons: dbut,
         headerType: 4
     }
@@ -270,7 +270,7 @@ break
 ━━━━『💻Utils💻』━━━━
 ❐ google, image, meme, subreddit, tourl, img, iguser, gif, sticker, take, pinterest, carbon
 
- 🎐 𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 𝘼𝙧𝙪𝙨 🎐`			     
+ 🎐 𝙋𝙤𝙬𝙚𝙧𝙚𝙙 𝙗𝙮 𝘿𝙚𝙚𝙥𝙖𝙠 🎐`			     
 const hhbut = [
 {buttonId: `{prefix}info`, buttonText: {displayText: '📥Info'}, type: 1},
 {buttonId: `prefix}profile`, buttonText: {displayText: '⭐Profile'}, type: 1}
@@ -1173,8 +1173,8 @@ case 'subraddit': {
 break
 
 case 'spank': case 'ngif':
-    let soank = await group.findOne({ id: m.chat})
-let sk = soank.nsfw || "false"
+    let spank = await group.findOne({ id: m.chat})
+let sk = spank.nsfw || "false"
 const spankd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
 var spbuff = await getBuffer(spankd.data.url)
 var spgif = await GIFBufferToVideoBuffer(spbuff)   
@@ -1491,9 +1491,7 @@ case 'pussy':
 case 'thighs': 
 case 'yuri': 
 case 'tentacles': 
-let soank = await group.findOne({ id: m.chat})
-let sk = soank.nsfw || "false"
-const spankd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
+const response = await axios.get(`https://nekos.life/api/v2/img/${command}`)
 var spbuff = await getBuffer(spankd.data.url)
 var spgif = await GIFBufferToVideoBuffer(spbuff)   
 

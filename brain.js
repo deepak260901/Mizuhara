@@ -1467,39 +1467,6 @@ case 'fact':{
             }
             )
 			}
-			break
-
-//------NSFW FEATURES-----\\
-
-case 'masturbation': 
-case 'jahy': 
-case 'hentai': 
-case 'glasses': 
-case 'gangbang': 
-case 'foot': 
-case 'femdom': 
-case 'cum': 
-case 'ero': 
-case 'cuckold': 
-case 'blowjob': 
-case 'bdsm': 
-case 'ahegao': 
-case 'ass': 
-case 'orgy': 
-case 'panties': 
-case 'pussy': 
-case 'thighs': 
-case 'yuri': 
-case 'tentacles': 
-const response = await axios.get(`https://nekos.life/api/v2/img/${command}`)
-var spbuff = await getBuffer(spankd.data.url)
-var spgif = await GIFBufferToVideoBuffer(spbuff)   
-
-if (spankd.data.nsfw&& sk == 'false') return m.reply("❌ *nsfw* is not active in this group")
-
-await arus.sendMessage(m.chat,{video: spgif, gifPlayback:true},{ quoted:m }).catch(err => {
-                    return m.reply('error..')
-                                    })
 				break
  //////////////////////////ANIME\\\\\\\\\\\\\\\\\\\\\\\\      
 case 'pat':{

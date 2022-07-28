@@ -15,7 +15,7 @@ global.port = process.env.PORT || 8080;
   (global.prefix = process.env.PREFIX || "&"),
   (global.author = process.env.AUTHOR || "Deepak🐱"),
   (global.sessionName = "arus"),
-  (global.name = process.env.NAME || "Mizuhara"),
+  (global.name = process.env.NAME || "Deepak"),
   (global.thumb = fs.readFileSync("./trash/info.jpeg"));
 
 let file = require.resolve(__filename);

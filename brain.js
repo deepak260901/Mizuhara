@@ -174,8 +174,8 @@ case '':
 ]
 let buttonMessaged = {
         image: {url:"https://telegra.ph/file/2e9e255eb80abbde0f001.jpg"},
-        caption: `*Kon'nichiwa ${pushname} Did You Mean ${prefix}help ?*`,
-        footer: '©Arus 2022',
+        caption: `*Hello ${pushname} Did You Mean ${prefix}help ?*`,
+        footer: '©Gappu 2022',
         buttons: dbut,
         headerType: 4
     }
@@ -187,7 +187,7 @@ let buttonMessaged = {
 
 case "react":
 case "r": {
-let react = "🍀 *Reaction*\n *pat, hug, kick, slap, kiss, cuddle*"
+let react = "🍀 *Reaction*\n * cry, kill, lick, bite, yeet, neko, bully, bonk, wink, poke, nom, smile, wave, awoo, blush, smug, glomp, happy, dance, cringe, highfive, shinobu, megumin, handhold, pat, hug, kick, slap, kiss, cuddle*"
 m.reply(react)
 }
 break
@@ -241,7 +241,7 @@ break
 		   case "help":
                    case 'menu':
                    const hlp=`
-*(❤️ω❤️)Kon'nichiwa 👋🏻 watashiwa ${pushname} Darling I'm Mizuhara*
+*(❤️ω❤️)Hello 👋🏻 friend ${pushname} Darling I'm Gappu*
 
 📝Note: if Bot did not responding then it's offline or owner internet issue so please wait until Bot comes online.!
 
@@ -278,7 +278,7 @@ const hhbut = [
 let hbutto = {
         file: arus.sendMessage(m.chat,{video:fs.readFileSync('./trash/help.mp4'),gifPlayback:true,caption:hlp},{quoted:m}),
         caption: hlp,
-        footer: '©Arus 2022',
+        footer: '©Gappu 2022',
         buttons: hhbut,
         headerType: 4
     }
@@ -814,7 +814,7 @@ if (!isBotAdmins) return m.reply("❌ Cannot execute without being admin")
 ]
 const listMessage = {
   text: "Choose the required setting",
-  footer: "@ARUS",
+  footer: "@GAPPU",
   title: "",
   buttonText: "settings",
   sections
@@ -1319,7 +1319,7 @@ return m.reply (`Please give me valid insagram ID.`)
 break
 			       case 'update': {
 					   if (!isCreator) return m.reply("📍The user of this command must be the owner of the bot")
-      stdout = execSync('git remote set-url origin https://github.com/Arus-Bots/Mizuhara.git && git pull')
+      stdout = execSync('git remote set-url origin https://github.com/G.git && git pull')
       m.reply(stdout.toString())
     }
 			   break
@@ -1467,6 +1467,41 @@ case 'fact':{
             }
             )
 			}
+			break
+
+//------NSFW FEATURES-----\\
+
+case 'masturbation': 
+case 'jahy': 
+case 'hentai': 
+case 'glasses': 
+case 'gangbang': 
+case 'foot': 
+case 'femdom': 
+case 'cum': 
+case 'ero': 
+case 'cuckold': 
+case 'blowjob': 
+case 'bdsm': 
+case 'ahegao': 
+case 'ass': 
+case 'orgy': 
+case 'panties': 
+case 'pussy': 
+case 'thighs': 
+case 'yuri': 
+case 'tentacles': 
+let soank = await group.findOne({ id: m.chat})
+let sk = soank.nsfw || "false"
+const spankd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
+var spbuff = await getBuffer(spankd.data.url)
+var spgif = await GIFBufferToVideoBuffer(spbuff)   
+
+if (spankd.data.nsfw&& sk == 'false') return m.reply("❌ *nsfw* is not active in this group")
+
+await arus.sendMessage(m.chat,{video: spgif, gifPlayback:true},{ quoted:m }).catch(err => {
+                    return m.reply('error..')
+                                    })
 				break
  //////////////////////////ANIME\\\\\\\\\\\\\\\\\\\\\\\\      
 case 'pat':{
@@ -1565,8 +1600,8 @@ console.log(recp)
     }
 }
 break
-case 'slap':{
-	var pat = await fetchJson(`https://api.waifu.pics/sfw/slap`)
+case 'bite':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/bite`)
 	try {
 		let usep = m.sender
 let recp=``
@@ -1579,12 +1614,12 @@ users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : tex
 	 ment=[usep,m.sender]
 }
 if(users == 'none'){
-     recp =`@${m.sender.split("@")[0]} slapped themselves`
+     recp =`@${m.sender.split("@")[0]} bit themselves`
      console.log(recp)
 
 } else {
 const rcpp =`@${users.split("@"[0])}`
- recp= `@${m.sender.split("@")[0]} slapped @${users.split("@")[0]} `
+ recp= `@${m.sender.split("@")[0]} bit @${users.split("@")[0]} `
 
 console.log(recp)
 }
@@ -1597,8 +1632,8 @@ console.log(recp)
     }
 }
 break
-case 'cuddle':{
-	var pat = await fetchJson(`https://api.waifu.pics/sfw/cuddle`)
+case 'smug':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/smug`)
 	try {
 		let usep = m.sender
 let recp=``
@@ -1611,12 +1646,684 @@ users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : tex
 	 ment=[usep,m.sender]
 }
 if(users == 'none'){
-     recp =`@${m.sender.split("@")[0]} cuddled themselves`
+     recp =`@${m.sender.split("@")[0]} smugged themselves`
      console.log(recp)
 
 } else {
 const rcpp =`@${users.split("@"[0])}`
- recp= `@${m.sender.split("@")[0]} cuddled @${users.split("@")[0]} `
+ recp= `@${m.sender.split("@")[0]} smugged @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'yeet':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/yeet`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} yeeted themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} yeeted @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'neko':{
+	var pat = await fetchJson(`https://nekos.life/api/v2/img/neko`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} neko themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} neko @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'cry':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/cry`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} cried themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} cried @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'bully':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/bully`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} bully themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} bully @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'bonk':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/bonk`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} bonked themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} bonked @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'wink':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/wink`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} winked themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} winked @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'poke':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/poke`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} poked themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} poked @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'nom':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/nom`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} nomed themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} nomed @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'smile':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/smile`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} smiled themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} smiled @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'wave':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/wave`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} waved themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} waved @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'awoo':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/awoo`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} awooed themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} awooed @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'awoo2':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/awoo`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} awooed themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} awooed @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'blush':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/blush`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} blushed themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} blushed @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'glomp':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/glomp`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} glomped themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} glomped @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'happy':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/happy`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} happy themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} happy @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'dance':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/dance`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} danced themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} danced @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'cringe':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/cringe`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} cringed themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} cringed @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'highfive':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/highfive`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} highfived themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} highfived @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'handhold':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/handhold`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} handhold themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} handhold @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'shinobu':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/shinobu`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} shinobu themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} shinobu @${users.split("@")[0]} `
+
+console.log(recp)
+}
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var sgif = await GIFBufferToVideoBuffer(buffer)
+		arus.sendMessage(m.chat,{video: sgif, gifPlayback:true,mentions:ment,caption:recp},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+}
+break
+case 'megumim':{
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/megumin`)
+	try {
+		let usep = m.sender
+let recp=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+ ment=[usep,users]
+} catch {
+	users = "none"
+	 ment=[usep,m.sender]
+}
+if(users == 'none'){
+     recp =`@${m.sender.split("@")[0]} megumin themselves`
+     console.log(recp)
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
+ recp= `@${m.sender.split("@")[0]} megumin @${users.split("@")[0]} `
 
 console.log(recp)
 }
@@ -1851,7 +2558,7 @@ break
                 for (let i of anu) {
                     //await sleep(1500)
 
-  let txt = `🔰</ _*Arus Broadcast*_ >🔰\n\n🍀 *Author:* ${pushname}\n\n🏮 *Message:* ${bct}`
+  let txt = `🔰</ _*Gappu Broadcast*_ >🔰\n\n🍀 *Author:* ${pushname}\n\n🏮 *Message:* ${bct}`
 //const stick=fs.readFileSync(`./trash/right.webp`)
 //await arus.sendMessage(m.chat,{sticker:stick},{quoted:m})
 await arus.sendMessage(i, { video: { url: "https://telegra.ph/file/3c3f94c8463e7f9c29d73.mp4" }, mimetype: 'video/mp4', fileName: `bc.mp4`, caption: `${txt}` })
